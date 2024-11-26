@@ -37,7 +37,7 @@ const Layout = ({ children }: LayoutProps) => {
 
   const [isExpanded, setIsExpanded] = useState(false);
   const [isHeartClicked, setIsHeartClicked] = useState<boolean>(false);
-  const [activeItem, setActiveItem] = useState('Home'); 
+  const [activeItem, setActiveItem] = useState('Home');
   const pathname = usePathname();
 
   useEffect(() => {
@@ -72,25 +72,36 @@ const Layout = ({ children }: LayoutProps) => {
 
   const catalogItems = [
     { 
-      name: 'Attention Kids', 
-      age: 'De 6 à 16 ans',
+      name: 'Generalized Anxiety Disorder (GAD)', 
       icon: Brain,
       color: 'bg-blue-500'
     },
     { 
-      name: 'Attention Adults', 
+      name: 'Panic Disorder', 
       age: 'De 6 à 16 ans',
       icon: Users,
       color: 'bg-green-500'
     },
     { 
-      name: 'Executive Functions', 
+      name: 'Social anxiety Disorder', 
       age: 'De 8 à 80 ans',
       icon: Activity,
       color: 'bg-purple-500'
     },
     { 
-      name: 'Memory', 
+      name: 'Specific phobias', 
+      age: 'De 12 à 90 ans',
+      icon: Cpu ,
+      color: 'bg-orange-500'
+    },
+    { 
+      name: 'Post-Traumatic Stress Disorder (PTSD)', 
+      age: 'De 12 à 90 ans',
+      icon: Cpu ,
+      color: 'bg-orange-500'
+    },
+    { 
+      name: 'Obsessive-Compulsive Disorder(OCD)', 
       age: 'De 12 à 90 ans',
       icon: Cpu ,
       color: 'bg-orange-500'
@@ -98,9 +109,9 @@ const Layout = ({ children }: LayoutProps) => {
   ];
 
   return (
-    <div className="w-full min-h-screen flex flex-col justify-between items-center bg-cover bg-center" style={{ backgroundImage: 'url(/assets/images/onboarding-img.png)' }}>
+    <div className="w-full min-h-screen flex flex-col justify-start items-center bg-cover bg-center" style={{ backgroundImage: 'url(/assets/images/onboarding-img.png)' }}>
       {/* Header */}
-      <div className="w-[80%] mt-4 pl-8 pr-2 py-3 bg-black rounded-full bg-opacity-60 flex justify-between items-center mb-6">
+      <div className="w-[90%] md:w-[80%] mt-4 pl-3 md:pl-8 pr-2 py-3 bg-black rounded-full bg-opacity-60 flex justify-between items-center mb-6">
         <div className="flex gap-2">
           <button
           onClick={() => setIsHeartClicked(!isHeartClicked)} 
@@ -112,22 +123,21 @@ const Layout = ({ children }: LayoutProps) => {
             <RotateCw />
           </button>
         </div>
-        <h1 className="text-xl font-semibold text-green-500">MindSpace VR</h1>
+        <h1 className="text-md md:text-xl font-semibold text-green-500">MindSpace VR</h1>
         <div>
           <Link 
           href='/controlPanel'
-          className="py-2 px-4 bg-green-500 bg-opacity-80 rounded-3xl transition-all">
+          className="py-2 px-2 md:px-4 bg-green-500 bg-opacity-80 rounded-3xl transition-all">
             Get Started
           </Link>
         </div>
       </div>
 
       {/* Main Content */}
-      <div className="flex justify-between w-[90%]">
-        {/* Sidebar */}
+      <div className="flex gap-5 w-[90%]">
         <section
-          className={`flex flex-col items-center justify-start h-full min-h-screen gap-5 mr-5 p-4 bg-black bg-opacity-70 rounded-3xl transition-all duration-300 ease-in-out relative ${
-            isExpanded ? 'w-58' : 'w-20'
+          className={`flex flex-col items-center justify-start h-full gap-5 py-4 px-2 bg-black bg-opacity-70 rounded-3xl transition-all duration-300 ease-in-out relative ${
+            isExpanded ? 'w-48' : 'w-12'
           }`}
         >
           <button
@@ -145,7 +155,7 @@ const Layout = ({ children }: LayoutProps) => {
               <li key={name}>
                 <button
                 onClick={() => setActiveItem(name)}
-                className={`flex items-center gap-3 px-4 py-2 rounded-lg ${
+                className={`flex items-center gap-3 ${isExpanded ? 'px-4' : 'px-2'} py-2 rounded-full ${
                   activeItem === name
                     ? 'bg-green-500 text-white'
                     : 'hover:bg-gray-600 hover:text-white'
@@ -164,14 +174,14 @@ const Layout = ({ children }: LayoutProps) => {
         </section>
 
         {/* Main Content Area */}
-        <div className="flex-1 bg-black bg-opacity-80 rounded-3xl p-8">
+        <div className="w-full bg-black bg-opacity-80 rounded-3xl p-8">
           {componentMap[activeItem]}
         </div>
-        <div className='flex ml-5 flex-col items-center gap-4'>
-          {/* Catalog */}
+      </div> 
+      <div className='w-[90%] flex items-start justify-start gap-4 mt-8'>
           <div className='bg-black bg-opacity-70 p-6 rounded-3xl w-full'>
             <h1 className="text-xl font-semibold mb-4">Catalogue de nos tests</h1>
-            <div className="space-y-3">
+            <div className="grid grid-cols-2 gap-2">
               {catalogItems.map(item => (
                 <div 
                   key={item.name}
@@ -183,7 +193,7 @@ const Layout = ({ children }: LayoutProps) => {
                     </div>
                     <div className="flex-1">
                       <h2 className="font-medium group-hover:text-white transition-colors">{item.name}</h2>
-                      <p className="text-sm text-gray-400">{item.age}</p>
+                      {/* <p className="text-sm text-gray-400">{item.age}</p> */}
                     </div>
                     <ArrowRight className="w-5 h-5 text-gray-400 group-hover:translate-x-1 transition-transform" />
                   </div>
@@ -191,8 +201,7 @@ const Layout = ({ children }: LayoutProps) => {
               ))}
             </div>
           </div>
-          {/* Contact */}
-          <div className='bg-black bg-opacity-70 p-6 rounded-3xl w-full'>
+          <div className='bg-black bg-opacity-70 p-6 rounded-3xl w-[40%]'>
             <h1 className="text-xl font-semibold mb-4">Contact us</h1>
             <div className="space-y-4">
               <a 
@@ -217,7 +226,6 @@ const Layout = ({ children }: LayoutProps) => {
             </div>
           </div>
         </div>
-      </div>
     </div>
   );
 };

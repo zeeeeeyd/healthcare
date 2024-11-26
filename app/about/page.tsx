@@ -18,11 +18,14 @@ const About = () => {
 
           {/* Description */}
           <p className="text-xs md:text-lg text-gray-200 leading-relaxed mb-12">
-            MindSpace VR is a powerful VR system allowing you to create personalized 
-            experiences tailored to your needs. With this tool, you can establish a VR 
-            space to help you manage stress and anxiety and achieve a sense of calm 
-            and relaxation. Innovative tool that empowers you to take control of your 
-            thoughts and emotions with just one click
+          MindSpaceVR is an advanced virtual reality platform
+          designed for psychological assessment. It immerses
+          users in a range of virtual scenarios where their
+          behaviors and responses are analyzed using artificial
+          intelligence. By integrating sensor technology, the
+          platform captures physiological data to provide deeper
+          insights into psychological conditions, facilitating more
+          accurate and personalized assessments.
           </p>
 
           {/* Feature Cards */}

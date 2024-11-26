@@ -1,13 +1,30 @@
 import Image from "next/image";
 import Link from "next/link";
-
+import { useState } from "react";
 import { StatCard } from "@/components/StatCard";
 import { columns } from "@/components/table/columns";
 import { DataTable } from "@/components/table/DataTable";
 import { getRecentAppointmentList } from "@/lib/actions/appointment.actions";
+import { ViewDetailsModal } from "@/components/ViewDetailsModal ";
+
+
 
 const AdminPage = async () => {
+
   const appointments = await getRecentAppointmentList();
+
+  // const [isModalOpen, setModalOpen] = useState(false);
+  // const [selectedPatient, setSelectedPatient] = useState(null);
+
+  // const handleViewDetails = (patient) => {
+  //   setSelectedPatient(patient);
+  //   setModalOpen(true);
+  // };
+
+  // const closeModal = () => {
+  //   setSelectedPatient(null);
+  //   setModalOpen(false);
+  // };
 
   return (
     <div className="mx-auto flex max-w-7xl flex-col space-y-14">
@@ -54,10 +71,18 @@ const AdminPage = async () => {
           />
         </section>
 
-        <DataTable columns={columns} data={appointments.documents} />
+        <DataTable columns={columns} data={appointments.documents}  />
+        {/* // handleViewDetails={handleViewDetails} */}
+        {/* <ViewDetailsModal
+          isOpen={isModalOpen}
+          onClose={closeModal}
+          data={selectedPatient}
+        /> */}
       </main>
     </div>
   );
 };
 
 export default AdminPage;
+
+

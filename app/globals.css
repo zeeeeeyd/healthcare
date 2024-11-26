@@ -275,6 +275,7 @@
   .date-picker {
     @apply overflow-hidden border-transparent w-full placeholder:text-dark-600  h-11 text-14-medium rounded-md px-3 outline-none !important;
   }
+
 }
 
 /* =====  REACT-DATEPICKER OVERRIDES */
