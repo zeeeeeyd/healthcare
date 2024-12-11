@@ -85,6 +85,14 @@ export const columns: ColumnDef<Appointment>[] = [
             patientId={appointment.patient.$id}
             userId={appointment.userId}
             appointment={appointment}
+            type="data"
+            title="Schedule Appointment"
+            description="Please confirm the following details to schedule."
+          />
+          <AppointmentModal
+            patientId={appointment.patient.$id}
+            userId={appointment.userId}
+            appointment={appointment}
             type="schedule"
             title="Schedule Appointment"
             description="Please confirm the following details to schedule."

@@ -67,7 +67,7 @@ const Layout = ({ children }: LayoutProps) => {
     { name: 'Story Behind', href: '/story', icon: BookOpen },
     { name: 'Offers', href: '/offers', icon: Gift },
     { name: 'Plan', href: '/plan', icon: Calendar },
-    { name: 'Report', href: '/report', icon: FileText },
+      // { name: 'Report', href: '/report', icon: FileText },
   ];
 
   const catalogItems = [
@@ -111,7 +111,7 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="w-full min-h-screen flex flex-col justify-start items-center bg-cover bg-center" style={{ backgroundImage: 'url(/assets/images/onboarding-img.png)' }}>
       {/* Header */}
-      <div className="w-[90%] md:w-[80%] mt-4 pl-3 md:pl-8 pr-2 py-3 bg-black rounded-full bg-opacity-60 flex justify-between items-center mb-6">
+      <div className="w-[90%] md:w-[80%] mt-4 pl-3 md:pl-8 pr-2 py-3 bg-black rounded-full bg-opacity-45 flex justify-between items-center mb-6">
         <div className="flex gap-2">
           <button
           onClick={() => setIsHeartClicked(!isHeartClicked)} 
@@ -136,7 +136,7 @@ const Layout = ({ children }: LayoutProps) => {
       {/* Main Content */}
       <div className="flex gap-5 w-[90%]">
         <section
-          className={`flex flex-col items-center justify-start h-full gap-5 py-4 px-2 bg-black bg-opacity-70 rounded-3xl transition-all duration-300 ease-in-out relative ${
+          className={`flex flex-col items-center justify-start h-full gap-5 py-4 px-2 bg-black bg-opacity-50 rounded-3xl transition-all duration-300 ease-in-out relative ${
             isExpanded ? 'w-48' : 'w-12'
           }`}
         >
@@ -174,12 +174,12 @@ const Layout = ({ children }: LayoutProps) => {
         </section>
 
         {/* Main Content Area */}
-        <div className="w-full bg-black bg-opacity-80 rounded-3xl p-8">
+        <div className="w-full bg-black bg-opacity-60 rounded-3xl p-8">
           {componentMap[activeItem]}
         </div>
       </div> 
       <div className='w-[90%] flex items-start justify-start gap-4 mt-8'>
-          <div className='bg-black bg-opacity-70 p-6 rounded-3xl w-full'>
+          <div className='bg-black bg-opacity-60 p-6 rounded-3xl w-full'>
             <h1 className="text-xl font-semibold mb-4">Catalogue de nos tests</h1>
             <div className="grid grid-cols-2 gap-2">
               {catalogItems.map(item => (
@@ -201,7 +201,7 @@ const Layout = ({ children }: LayoutProps) => {
               ))}
             </div>
           </div>
-          <div className='bg-black bg-opacity-70 p-6 rounded-3xl w-[40%]'>
+          <div className='bg-black bg-opacity-60 p-6 rounded-3xl w-[40%]'>
             <h1 className="text-xl font-semibold mb-4">Contact us</h1>
             <div className="space-y-4">
               <a 

@@ -4,39 +4,22 @@ import { useState } from "react";
 import { StatCard } from "@/components/StatCard";
 import { columns } from "@/components/table/columns";
 import { DataTable } from "@/components/table/DataTable";
-import { getRecentAppointmentList } from "@/lib/actions/appointment.actions";
-import { ViewDetailsModal } from "@/components/ViewDetailsModal ";
+import { getPatientData, getRecentAppointmentList } from "@/lib/actions/appointment.actions";
+
 
 
 
 const AdminPage = async () => {
 
   const appointments = await getRecentAppointmentList();
+  const patientData = await getPatientData();
 
-  // const [isModalOpen, setModalOpen] = useState(false);
-  // const [selectedPatient, setSelectedPatient] = useState(null);
-
-  // const handleViewDetails = (patient) => {
-  //   setSelectedPatient(patient);
-  //   setModalOpen(true);
-  // };
-
-  // const closeModal = () => {
-  //   setSelectedPatient(null);
-  //   setModalOpen(false);
-  // };
 
   return (
     <div className="mx-auto flex max-w-7xl flex-col space-y-14">
       <header className="admin-header">
         <Link href="/" className="cursor-pointer">
-          <Image
-            src="/assets/icons/logo-full.svg"
-            height={32}
-            width={162}
-            alt="logo"
-            className="h-8 w-fit"
-          />
+          <h1 className="text-2xl font-bold mb-6 text-green-500">MindSpace VR</h1>
         </Link>
 
         <p className="text-16-semibold">Admin Dashboard</p>
@@ -72,12 +55,8 @@ const AdminPage = async () => {
         </section>
 
         <DataTable columns={columns} data={appointments.documents}  />
-        {/* // handleViewDetails={handleViewDetails} */}
-        {/* <ViewDetailsModal
-          isOpen={isModalOpen}
-          onClose={closeModal}
-          data={selectedPatient}
-        /> */}
+        {/* <DataTable columns={columns} data={patientData.documents}  /> */}
+
       </main>
     </div>
   );
