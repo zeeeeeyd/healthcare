@@ -78,7 +78,7 @@ const Plan = () => {
                     <span>{feature}</span>
                   </div>
                 ))}
-                {plan.additional.map((extra, i) => (
+                {(plan.additional || []).map((extra, i) => (
                   <div key={i} className="flex items-center gap-3 text-gray-300">
                     <Check className="w-5 h-5 text-emerald-400" />
                     <span>{extra}</span>
@@ -94,8 +94,9 @@ const Plan = () => {
 
         <div className="mt-12 text-center text-gray-400 max-w-2xl mx-auto">
           <p className="text-sm">
-            * VR headsets and Bio-sensors are available with a returnable security deposit
-            for Specialists plan members. Terms and conditions apply.
+          Get a VR headset and biosensor whether you'll use them for
+          work or research, we provide these equipment for rent. If
+          you're interested, contact us.
           </p>
         </div>
       </div>
