@@ -3,8 +3,8 @@ import { Glasses, Brain } from 'lucide-react';
 
 const Story = () => {
   return (
-    <div className="text-white py-8 px-4">
-      <div className="max-w-5xl mx-auto flex flex-wrap gap-8">
+    <div className="text-white py-2">
+      <div className="max-w-5xl mx-auto flex flex-wrap gap-2">
         {/* Virtual Reality Section */}
         <div className="relative flex-1 min-w-[300px]">
           <img
@@ -28,7 +28,7 @@ const Story = () => {
         <div className="relative flex-1 min-w-[300px]">
           <img
             className="rounded-lg w-full h-full object-cover"
-            src="/assets/images/AI.png"
+            src="/assets/images/AI.jpg"
             alt="AI visual"
           />
           <div className="absolute inset-0 flex flex-col justify-center items-start px-6 bg-gradient-to-t from-black/80 via-black/70 to-transparent rounded-lg">

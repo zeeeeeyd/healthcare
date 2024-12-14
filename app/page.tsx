@@ -28,6 +28,7 @@ import Offers from './offers/page';
 import Plan from './plan/page';
 import Story from './story/page';
 import Report from './report/page';
+import GapInfo from './gap/page';
 
 type LayoutProps = {
   children: ReactNode;
@@ -59,6 +60,7 @@ const Layout = ({ children }: LayoutProps) => {
     Offers: <Offers />,
     Plan: <Plan />,
     Report: <Report />,
+    Gap: <GapInfo />,
   };
 
   const menuItems = [
@@ -107,6 +109,10 @@ const Layout = ({ children }: LayoutProps) => {
       color: 'bg-orange-500'
     }
   ];
+
+  const handleView = (itemName: string) => {
+    setActiveItem(itemName);
+  };  
 
   return (
     <div className="w-full min-h-screen flex flex-col justify-start items-center bg-cover bg-center" style={{ backgroundImage: 'url(/assets/images/onboarding-img.png)' }}>
@@ -182,23 +188,25 @@ const Layout = ({ children }: LayoutProps) => {
           <div className='bg-black bg-opacity-60 p-6 rounded-3xl w-full'>
             <h1 className="text-xl font-semibold mb-4">Catalogue de nos tests</h1>
             <div className="grid grid-cols-2 gap-2">
-              {catalogItems.map(item => (
-                <div 
-                  key={item.name}
-                  className="p-4 rounded-2xl bg-gray-700 hover:bg-gray-800 transition-all cursor-pointer group"
-                >
-                  <div className="flex items-center gap-3">
-                    <div className={`p-2 rounded-xl ${item.color} bg-opacity-20`}>
-                      <item.icon className={`w-5 h-5 ${item.color.replace('bg-', 'text-')}`} />
-                    </div>
-                    <div className="flex-1">
-                      <h2 className="font-medium group-hover:text-white transition-colors">{item.name}</h2>
-                      {/* <p className="text-sm text-gray-400">{item.age}</p> */}
-                    </div>
-                    <ArrowRight className="w-5 h-5 text-gray-400 group-hover:translate-x-1 transition-transform" />
+            {catalogItems.map(item => (
+              <div 
+                key={item.name}
+                className="p-4 rounded-2xl bg-gray-700 hover:bg-gray-800 transition-all cursor-pointer group"
+                onClick={() => handleView('Gap')}
+              >
+                <div className="flex items-center gap-3">
+                  <div className={`p-2 rounded-xl ${item.color} bg-opacity-20`}>
+                    <item.icon className={`w-5 h-5 ${item.color.replace('bg-', 'text-')}`} />
                   </div>
+                  <div className="flex-1">
+                    <h2 className="font-medium group-hover:text-white transition-colors">{item.name}</h2>
+                    {/* <p className="text-sm text-gray-400">{item.age}</p> */}
+                  </div>
+                  <ArrowRight className="w-5 h-5 text-gray-400 group-hover:translate-x-1 transition-transform" />
                 </div>
-              ))}
+              </div>
+            ))}
+
             </div>
           </div>
           <div className='bg-black bg-opacity-60 p-6 rounded-3xl w-[40%]'>

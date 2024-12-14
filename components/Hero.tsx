@@ -62,7 +62,7 @@ const Hero = () => {
           </div>
           <div className="flex flex-col items-center gap-4">
             <DollarSign className="w-7 h-7 text-emerald-400" />
-            <p className="text-md text-gray-300">Prices Adapted to Clinics or Hospitals</p>
+            <p className="text-md text-gray-300">Premium pricing plans</p>
           </div>
           {/* <div className="flex flex-col items-center gap-4">
             <Globe className="w-7 h-7 text-blue-400" />
@@ -74,7 +74,7 @@ const Hero = () => {
           </div>
           <div className="flex flex-col items-center gap-4">
             <CheckCircle className="w-7 h-7 text-emerald-400" />
-            <p className="text-md text-gray-300">Self-Reported Symptom Assessment</p>
+            <p className="text-md text-gray-300">Online appointment booking</p>
           </div>
         </div>
       </div>

@@ -20,7 +20,6 @@ const Plan = () => {
       price: "3000 DA",
       duration: "20 uses/month",
       trial: "15 days free trial",
-      additional: ["Unlimited uses"],
     },
     {
       title: "Specialists - Unlimited Plan",
