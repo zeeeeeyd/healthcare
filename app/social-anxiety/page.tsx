@@ -15,7 +15,7 @@ const SocialAnxiety: React.FC = () => {
     <div className="min-h-screen flex py-8 px-4 text-gray-200">
       <div className="max-w-4xl mx-auto w-full">
         <h1 className="text-3xl md:text-4xl font-semibold text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-emerald-400 mb-8">
-        Social anxiety Disorder :
+        Social anxiety Disorder 
         </h1>
         <p className="leading-relaxed text-lg text-justify mb-6">
         This test assesses various symptoms of social anxiety

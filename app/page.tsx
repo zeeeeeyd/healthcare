@@ -102,7 +102,7 @@ const Layout = ({ children }: LayoutProps) => {
       age: 'De 8 à 80 ans',
       icon: Activity,
       color: 'bg-purple-500',
-      key : 'social'
+      key : 'Social'
     },
     { 
       name: 'Specific phobias', 
