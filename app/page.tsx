@@ -30,6 +30,7 @@ import Story from './story/page';
 import Report from './report/page';
 import GapInfo from './gap/page';
 import Panic from './panic/page';
+import SocialAnxiety from './social-anxiety/page';
 
 type LayoutProps = {
   children: ReactNode;
@@ -63,6 +64,7 @@ const Layout = ({ children }: LayoutProps) => {
     Report: <Report />,
     Gap: <GapInfo />,
     Panic : <Panic />,
+    Social : <SocialAnxiety />
   };
 
   const menuItems = [
@@ -92,7 +94,8 @@ const Layout = ({ children }: LayoutProps) => {
       name: 'Social anxiety Disorder', 
       age: 'De 8 à 80 ans',
       icon: Activity,
-      color: 'bg-purple-500'
+      color: 'bg-purple-500',
+      key : 'social'
     },
     { 
       name: 'Specific phobias', 
