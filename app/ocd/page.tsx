@@ -1,7 +1,7 @@
 import React from 'react';
 import { Clock, Users, Languages, FileText, Calendar } from 'lucide-react';
 
-const Ptsd: React.FC = () => {
+const Ocd: React.FC = () => {
   const information = [
     { title: 'ORIENTED TO', content: 'Psychological Assessment through Virtual Reality', icon: <FileText size={24} /> },
     { title: 'DURATION', content: '15-20 minutes', icon: <Clock size={24} /> },
@@ -15,13 +15,12 @@ const Ptsd: React.FC = () => {
     <div className="min-h-screen flex py-8 px-4 text-gray-200">
       <div className="max-w-4xl mx-auto w-full">
         <h1 className="text-3xl md:text-4xl font-semibold text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-emerald-400 mb-8">
-            Post-Traumatic Stress Disorder (PTSD)
+            Obsessive-Compulsive Disorder(OCD)
         </h1>
         <p className="leading-relaxed text-lg text-justify mb-6">
-        The test assesses symptoms of post-traumatic stress
-        disorder such as restoration of traumatic experience,
-        avoidance behavior, arousal, and accompanying
-        physiological symptoms.
+        The test assesses signs of OCD such as time spent on
+        compulsive actions, avoidance patterns, decision-
+        making time, signs of distress, etc.
         </p>
         <div className="border-t border-gray-600 my-6"></div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -40,4 +39,4 @@ const Ptsd: React.FC = () => {
   );
 };
 
-export default Ptsd;
+export default Ocd;

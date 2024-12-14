@@ -32,6 +32,8 @@ import GapInfo from './gap/page';
 import Panic from './panic/page';
 import SocialAnxiety from './social-anxiety/page';
 import SpecificPhobias from './specific-phobias/page';
+import Ptsd from './ptsd/page';
+import Ocd from './ocd/page';
 
 type LayoutProps = {
   children: ReactNode;
@@ -66,7 +68,10 @@ const Layout = ({ children }: LayoutProps) => {
     Gap: <GapInfo />,
     Panic : <Panic />,
     Social : <SocialAnxiety />,
-    Specific : <SpecificPhobias />
+    Specific : <SpecificPhobias />,
+    Ptsd : <Ptsd />,
+    Ocd : <Ocd />,
+  
   };
 
   const menuItems = [
@@ -110,13 +115,15 @@ const Layout = ({ children }: LayoutProps) => {
       name: 'Post-Traumatic Stress Disorder (PTSD)', 
       age: 'De 12 à 90 ans',
       icon: Cpu ,
-      color: 'bg-orange-500'
+      color: 'bg-orange-500',
+      key : 'Ptsd'
     },
     { 
       name: 'Obsessive-Compulsive Disorder(OCD)', 
       age: 'De 12 à 90 ans',
       icon: Cpu ,
-      color: 'bg-orange-500'
+      color: 'bg-orange-500',
+      key : 'Ocd'
     }
   ];
 
