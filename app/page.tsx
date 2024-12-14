@@ -230,13 +230,13 @@ const Layout = ({ children }: LayoutProps) => {
             <h1 className="text-xl font-semibold mb-4">Contact us</h1>
             <div className="space-y-4">
               <a 
-                href="mailto:123@example.com" 
+                href="mailto:benkartabakheira27@gmail.com" 
                 className="flex items-center gap-3 p-4 rounded-2xl bg-gray-700 hover:bg-gray-800 transition-all group cursor-pointer"
               >
                 <div className="p-2 rounded-xl bg-blue-500 bg-opacity-20">
                   <Mail className="w-5 h-5 text-blue-500" />
                 </div>
-                <span className="group-hover:text-white transition-colors">123@example.com</span>
+                <span className="group-hover:text-white transition-colors">benkartabakheira27@gmail.com</span>
               </a>
               
               <a 
@@ -246,7 +246,7 @@ const Layout = ({ children }: LayoutProps) => {
                 <div className="p-2 rounded-xl bg-green-500 bg-opacity-20">
                   <Phone className="w-5 h-5 text-green-500" />
                 </div>
-                <span className="group-hover:text-white transition-colors">01 23 45 67 89</span>
+                <span className="group-hover:text-white transition-colors">+213 696 917 782</span>
               </a>
             </div>
           </div>
