@@ -29,6 +29,7 @@ import Plan from './plan/page';
 import Story from './story/page';
 import Report from './report/page';
 import GapInfo from './gap/page';
+import Panic from './panic/page';
 
 type LayoutProps = {
   children: ReactNode;
@@ -61,6 +62,7 @@ const Layout = ({ children }: LayoutProps) => {
     Plan: <Plan />,
     Report: <Report />,
     Gap: <GapInfo />,
+    Panic : <Panic />,
   };
 
   const menuItems = [
@@ -76,13 +78,15 @@ const Layout = ({ children }: LayoutProps) => {
     { 
       name: 'Generalized Anxiety Disorder (GAD)', 
       icon: Brain,
-      color: 'bg-blue-500'
+      color: 'bg-blue-500',
+      key : 'Gap'
     },
     { 
       name: 'Panic Disorder', 
       age: 'De 6 à 16 ans',
       icon: Users,
-      color: 'bg-green-500'
+      color: 'bg-green-500',
+      key : 'Panic'
     },
     { 
       name: 'Social anxiety Disorder', 
@@ -192,7 +196,7 @@ const Layout = ({ children }: LayoutProps) => {
               <div 
                 key={item.name}
                 className="p-4 rounded-2xl bg-gray-700 hover:bg-gray-800 transition-all cursor-pointer group"
-                onClick={() => handleView('Gap')}
+                onClick={() => handleView(item.key)}
               >
                 <div className="flex items-center gap-3">
                   <div className={`p-2 rounded-xl ${item.color} bg-opacity-20`}>
