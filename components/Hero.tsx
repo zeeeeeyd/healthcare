@@ -18,7 +18,7 @@ const Hero = () => {
           muscle tension, difficulty concentrating, unexpected panic
           attacks, fear of social situations, obsessive thoughts and
           compulsive behaviors, painful memories, and avoidance of
-          trauma-related stimuli in children and adults.
+          trauma-related stimuli in adults.
         </p>
         <div className="w-full flex justify-center mt-12">
           <button
