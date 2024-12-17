@@ -38,7 +38,7 @@ const Offers = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div>
             <h1 className="text-3xl font-bold mb-4">
-              All you need is a VR headset, a computer, and a WiFi connection.
+              All you need is a VR headset, a computer, biosensor and a WiFi connection.
             </h1>
             <p className="text-lg">
               With your subscription plan, you'll have access to manuals, guides, demonstration videos, and more.

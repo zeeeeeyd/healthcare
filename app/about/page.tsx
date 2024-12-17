@@ -64,7 +64,7 @@ const About = () => {
           {/* CTA Button */}
           <div className="mt-12">
             <button className="bg-gradient-to-r from-blue-500 to-emerald-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:scale-105 transition-transform duration-300">
-              Start Your Wellness Journey
+              Test for free
             </button>
           </div>
         </div>

@@ -31,12 +31,11 @@ const Plan = () => {
     {
       title: "Specialists - Annual Plan",
       price: "36000 DA",
-      duration: "Unlimited uses annually",
+      option: '9000DA / trimonthly plan',
+      duration: "Unlimited",
       trial: "15 days free trial",
       additional: [
         "Online appointment booking",
-        "Unlimited uses",
-        "9000 DA trimonthly plan available",
       ],
     },
   ];
@@ -69,6 +68,7 @@ const Plan = () => {
                   {plan.price}
                   <span className="text-lg text-gray-400">/{plan.duration}</span>
                 </div>
+                <div className="text-lg text-gray-400 font-semibold mb-2">{plan.option}</div>
                 <div className="text-emerald-400 font-semibold">{plan.trial}</div>
               </div>
               <div className="space-y-4 mb-8">
