@@ -36,7 +36,7 @@ const About = () => {
                 AI-Powered Personalization
               </h3>
               <p className="text-gray-300 text-xs">
-                Adaptive experiences that learn and evolve with your needs
+                Analyze data and create interpretive reports
               </p>
             </div>
 
@@ -46,17 +46,17 @@ const About = () => {
                 Immersive Environments
               </h3>
               <p className="text-gray-300 text-xs">
-                Calming virtual spaces designed for mental wellbeing
+                Simulate interactive, realistic environments.
               </p>
             </div>
 
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-left hover:bg-white/20 transition-all duration-300">
               <HeartPulse className="w-8 h-8 text-purple-400 mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">
-                Stress Management
+                Vital Data Monitoring
               </h3>
               <p className="text-gray-300 text-xs">
-                Real-time tools to help you achieve inner peace
+                Meassure and monitor vital signs in real time 
               </p>
             </div>
           </div>

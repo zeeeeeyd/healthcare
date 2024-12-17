@@ -34,6 +34,10 @@ const SpecificPhobias: React.FC = () => {
             </div>
           ))}
         </div>
+        <div className='flex justify-center items-center gap-4 mt-12'>
+          <button className="bg-gradient-to-r from-blue-500 to-emerald-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:scale-105 transition-transform duration-300">See Product</button>
+          <button className=" border border-emerald-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:scale-105 transition-transform duration-300">Go to plans</button>
+        </div>
       </div>
     </div>
   );

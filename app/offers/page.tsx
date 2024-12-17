@@ -16,8 +16,8 @@ const Offers = () => {
     },
     {
       icon: <MessageCircle className="w-4 h-4 text-white" />,
-      title: "Enhance Client Communication",
-      description: "Create comprehensive reports with charts, graphs, and simple explanations using easy-to-understand language."
+      title: "Get the psychological assessment report",
+      description: "Get comprehensive reports with charts, graphs, and simple explanations using easy-to-understand language."
     },
     {
       icon: <Eye className="w-4 h-4 text-white" />,
