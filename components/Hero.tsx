@@ -23,7 +23,7 @@ const Hero = () => {
         <div className="w-full flex justify-center mt-12">
           <button
             onClick={() => {
-              window.location.href = 'https://www.youtube.com/watch?v=RczmGUXtwSc';
+              window.location.href = 'https://drive.google.com/file/d/1YVPx2gs9GXjEbs0eUp4I_SaJkEwBoqfi/view';
             }}
             className="bg-gradient-to-r from-blue-500 to-emerald-500 text-white px-8 py-4 rounded-full text-md font-semibold hover:scale-105 transition-transform duration-300 flex items-center gap-3"
           >
